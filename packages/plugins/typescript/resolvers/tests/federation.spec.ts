@@ -346,6 +346,157 @@ describe('TypeScript Resolvers Plugin + Apollo Federation', () => {
     expect(content).not.toContain('GraphQLScalarType');
   });
 
+  describe('When there are inner fields used in @key directive', () => {
+    it('should change parent type and extract one inner field', async () => {
+      const federatedSchema = /* GraphQL */ `
+        type Person {
+          id: ID!
+        }
+
+        type User @key(fields: "person { id }") {
+          person: Person!
+        }
+      `;
+
+      const content = await generate({
+        schema: federatedSchema,
+        config: {
+          federation: true,
+        },
+      });
+
+      expect(content).toBeSimilarStringTo(`
+        export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
+          __resolveReference?: ReferenceResolver<Maybe<ResolversTypes['User']>, { __typename: 'User' } & Pick<ParentType['person'], 'id'>, ContextType>;
+          person?: Resolver<ResolversTypes['Person'], ParentType, ContextType>;
+          __isTypeOf?: IsTypeOfResolverFn<ParentType>;
+        };
+      `);
+    });
+
+    it('should change parent type and extract several inner fields', async () => {
+      const federatedSchema = /* GraphQL */ `
+        type Person {
+          id: ID!
+          personalId: ID!
+        }
+
+        type User @key(fields: "person { id personalId }") {
+          person: Person!
+        }
+      `;
+
+      const content = await generate({
+        schema: federatedSchema,
+        config: {
+          federation: true,
+        },
+      });
+
+      expect(content).toBeSimilarStringTo(`
+        export type UserResolvers<ContextType = any, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = {
+          __resolveReference?: ReferenceResolver<Maybe<ResolversTypes['User']>, { __typename: 'User' } & Pick<ParentType['person'], 'id' | 'personalId'>, ContextType>;
+          person?: Resolver<ResolversTypes['Person'], ParentType, ContextType>;
+          __isTypeOf?: IsTypeOfResolverFn<ParentType>;
+        };
+      `);
+    });
+
+    it('should change parent type and extract one inner field given duplicate @key directive', async () => {
+      const federatedSchema = /* GraphQL */ `
+        type Author {
+          id: ID!
+        }
+
+        type Publisher {
+          id: ID!
+        }
+
+        type Book @key(fields: "author { id }") @key(fields: "publisher { id }") {
+          author: Author!
+          publisher: Publisher!
+        }
+      `;
+
+      const content = await generate({
+        schema: federatedSchema,
+        config: {
+          federation: true,
+        },
+      });
+
+      expect(content).toBeSimilarStringTo(`
+        export type BookResolvers<ContextType = any, ParentType extends ResolversParentTypes['Book'] = ResolversParentTypes['Book']> = {
+          __resolveReference?: ReferenceResolver<Maybe<ResolversTypes['Book']>, { __typename: 'Book' } & (Pick<ParentType['author'], 'id'> | Pick<ParentType['publisher'], 'id'>), ContextType>;
+          author?: Resolver<ResolversTypes['Author'], ParentType, ContextType>;
+          publisher?: Resolver<ResolversTypes['Publisher'], ParentType, ContextType>;
+          __isTypeOf?: IsTypeOfResolverFn<ParentType>;
+        };
+      `);
+    });
+
+    it('should change parent type and extract several inner fields given duplicate @key directive', async () => {
+      const federatedSchema = /* GraphQL */ `
+        type Author {
+          id: ID!
+          writerAssocId: ID!
+        }
+
+        type Publisher {
+          id: ID!
+          publisherAssocId: ID!
+        }
+
+        type Book @key(fields: "author { id writerAssocId }") @key(fields: "publisher { id publisherAssocId }") {
+          author: Author!
+          publisher: Publisher!
+        }
+      `;
+
+      const content = await generate({
+        schema: federatedSchema,
+        config: {
+          federation: true,
+        },
+      });
+
+      expect(content).toBeSimilarStringTo(`
+        export type BookResolvers<ContextType = any, ParentType extends ResolversParentTypes['Book'] = ResolversParentTypes['Book']> = {
+          __resolveReference?: ReferenceResolver<Maybe<ResolversTypes['Book']>, { __typename: 'Book' } & (Pick<ParentType['author'], 'id' | 'writerAssocId'> | Pick<ParentType['publisher'], 'id' | 'publisherAssocId'>), ContextType>;
+          author?: Resolver<ResolversTypes['Author'], ParentType, ContextType>;
+          publisher?: Resolver<ResolversTypes['Publisher'], ParentType, ContextType>;
+          __isTypeOf?: IsTypeOfResolverFn<ParentType>;
+        };
+      `);
+    });
+
+    it('should throw error when several parents are used in the @key directive', async () => {
+      const federatedSchema = /* GraphQL */ `
+        type Author {
+          id: ID!
+        }
+
+        type Publisher {
+          id: ID!
+        }
+
+        type Book @key(fields: "author { id } publisher { id }") {
+          author: Author!
+          publisher: Publisher!
+        }
+      `;
+
+      await expect(
+        generate({
+          schema: federatedSchema,
+          config: {
+            federation: true,
+          },
+        })
+      ).rejects.toThrow();
+    });
+  });
+
   describe('When field definition wrapping is enabled', () => {
     it('should add the UnwrappedObject type', async () => {
       const federatedSchema = /* GraphQL */ `
