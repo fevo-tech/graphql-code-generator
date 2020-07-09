@@ -92,6 +92,11 @@ export function removeFederation(schema: GraphQLSchema): GraphQLSchema {
 
 const resolveReferenceFieldName = '__resolveReference';
 
+type ExtractFieldSetResult = {
+  parentTypeRef?: string;
+  fieldSet: string[];
+};
+
 export class ApolloFederation {
   private enabled = false;
   private schema: GraphQLSchema;
@@ -178,7 +183,7 @@ export class ApolloFederation {
 
         // Look for @requires and see what the service needs and gets
         const requires = getDirectivesByName('requires', fieldNode)
-          .map(this.extractFieldSet)
+          .map(dn => this.extractFieldSet(dn).fieldSet)
           .reduce((prev, curr) => [...prev, ...curr], [])
           .map(name => {
             return { name, required: isNonNullType(parentType.getFields()[name].type) };
@@ -187,8 +192,9 @@ export class ApolloFederation {
 
         // @key() @key() - "primary keys" in Federation
         const primaryKeys = keys.map(def => {
-          const fields = this.extractFieldSet(def).map(name => ({ name, required: true }));
-          return this.translateFieldSet(fields, parentTypeSignature);
+          const { parentTypeRef, fieldSet } = this.extractFieldSet(def, parentTypeSignature);
+          const fields = fieldSet.map(name => ({ name, required: true }));
+          return this.translateFieldSet(fields, parentTypeRef);
         });
 
         const [open, close] = primaryKeys.length > 1 ? ['(', ')'] : ['', ''];
@@ -231,15 +237,29 @@ export class ApolloFederation {
     return `Pick<${parentTypeRef}, ${keys}>`;
   }
 
-  private extractFieldSet(directive: DirectiveNode): string[] {
+  private extractFieldSet(directive: DirectiveNode, parentTypeRef?: string): ExtractFieldSetResult {
     const arg = directive.arguments.find(arg => arg.name.value === 'fields');
     const value = (arg.value as StringValueNode).value;
+    const splitValues = value.split(/\s+/g);
 
     if (/[{}]/gi.test(value)) {
-      throw new Error('Nested fields in _FieldSet is not supported');
+      // TODO quite hacky, assumes that one '{' equals to one parent reference
+      if (splitValues.reduce((acc, v) => acc + (/[{]/gi.test(v) ? 1 : 0), 0) > 1) {
+        throw new Error(`
+          Nested fields in _FieldSet is not supported for several parents. Try using duplicate directives.
+          Example: '@key(fields: "entity1 { a }") @key(fields: "entity2 { b }")' instead of '@key(fields: "entity1 { a } entity2 { b }")'. 
+        `);
+      }
+      return {
+        parentTypeRef: `${parentTypeRef}['${splitValues.splice(0, 1)}']`,
+        fieldSet: deduplicate(splitValues.filter(v => !/[{}]/gi.test(v))),
+      };
     }
 
-    return deduplicate(value.split(/\s+/g));
+    return {
+      parentTypeRef,
+      fieldSet: deduplicate(splitValues),
+    };
   }
 
   private createMapOfProvides() {
@@ -251,7 +271,7 @@ export class ApolloFederation {
       if (isObjectType(objectType)) {
         Object.values(objectType.getFields()).forEach(field => {
           const provides = getDirectivesByName('provides', field.astNode)
-            .map(this.extractFieldSet)
+            .map(dn => this.extractFieldSet(dn).fieldSet)
             .reduce((prev, curr) => [...prev, ...curr], []);
           const ofType = getBaseType(field.type);
 
