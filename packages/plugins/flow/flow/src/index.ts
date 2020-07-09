@@ -1,4 +1,4 @@
-import { Types, PluginFunction } from '@graphql-codegen/plugin-helpers';
+import { Types, PluginFunction } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { parse, printSchema, visit, GraphQLSchema } from 'graphql';
 import { FlowVisitor } from './visitor';
 import { FlowPluginConfig } from './config';

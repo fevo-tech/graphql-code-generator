@@ -2,13 +2,13 @@ This plugin generates Flow types based on your `GraphQLSchema` and your GraphQL 
 
 It generates types for your GraphQL documents: Query, Mutation, Subscription and Fragment.
 
-This plugin requires you to use `@graphql-codegen/flow` as well, because it depends on it's types.
+This plugin requires you to use `@fevo-tech/graphql-codegen-flow` as well, because it depends on it's types.
 
 ## Installation
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/flow-operations
+    $ yarn add -D @fevo-tech/graphql-codegen-flow-operations
 
 :::
 

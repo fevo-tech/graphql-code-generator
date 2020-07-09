@@ -1,12 +1,12 @@
-import { validateTs } from '@graphql-codegen/testing';
+import { validateTs } from '@fevo-tech/graphql-codegen-testing';
 import { plugin } from '../src';
 import { VueApolloRawPluginConfig } from '../src/config';
 import { parse, GraphQLSchema, buildClientSchema } from 'graphql';
 import gql from 'graphql-tag';
-import { Types, mergeOutputs } from '@graphql-codegen/plugin-helpers';
+import { Types, mergeOutputs } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { plugin as tsPlugin } from '../../typescript/src/index';
 import { plugin as tsDocumentsPlugin } from '../../operations/src/index';
-import { DocumentMode } from '@graphql-codegen/visitor-plugin-common';
+import { DocumentMode } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { extract } from 'jest-docblock';
 
 describe('Vue Apollo', () => {

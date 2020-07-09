@@ -1,4 +1,4 @@
-import { RawClientSideBasePluginConfig } from '@graphql-codegen/visitor-plugin-common';
+import { RawClientSideBasePluginConfig } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 
 export interface RawGenericSdkPluginConfig extends RawClientSideBasePluginConfig {
   /**

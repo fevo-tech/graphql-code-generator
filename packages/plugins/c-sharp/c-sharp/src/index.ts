@@ -1,5 +1,5 @@
 import { parse, GraphQLSchema, printSchema, visit } from 'graphql';
-import { PluginFunction, Types } from '@graphql-codegen/plugin-helpers';
+import { PluginFunction, Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { CSharpResolversVisitor } from './visitor';
 import { buildPackageNameFromPath } from '../../common/common';
 import { dirname, normalize } from 'path';

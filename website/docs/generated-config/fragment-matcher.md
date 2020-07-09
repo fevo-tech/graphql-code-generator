@@ -14,7 +14,7 @@ Both in TypeScript and JavaScript a default export is being used.
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/fragment-matcher
+    $ yarn add -D @fevo-tech/graphql-codegen-fragment-matcher
 
 :::
 

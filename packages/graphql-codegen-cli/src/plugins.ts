@@ -1,4 +1,4 @@
-import { DetailedError, Types, CodegenPlugin } from '@graphql-codegen/plugin-helpers';
+import { DetailedError, Types, CodegenPlugin } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { resolve } from 'path';
 
 export async function getPluginByName(
@@ -6,9 +6,9 @@ export async function getPluginByName(
   pluginLoader: Types.PackageLoaderFn<CodegenPlugin>
 ): Promise<CodegenPlugin> {
   const possibleNames = [
-    `@graphql-codegen/${name}`,
-    `@graphql-codegen/${name}-template`,
-    `@graphql-codegen/${name}-plugin`,
+    `@fevo-tech/graphql-codegen-${name}`,
+    `@fevo-tech/graphql-codegen-${name}-template`,
+    `@fevo-tech/graphql-codegen-${name}-plugin`,
     `graphql-codegen-${name}`,
     `graphql-codegen-${name}-template`,
     `graphql-codegen-${name}-plugin`,

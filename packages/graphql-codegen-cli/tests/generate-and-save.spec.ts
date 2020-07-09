@@ -1,7 +1,7 @@
-import { useMonorepo } from '@graphql-codegen/testing';
+import { useMonorepo } from '@fevo-tech/graphql-codegen-testing';
 import { generate } from '../src/generate-and-save';
 import * as fs from '../src/utils/file-system';
-import { Types } from '@graphql-codegen/plugin-helpers';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { dirname, join } from 'path';
 import makeDir from 'make-dir';
 
@@ -50,7 +50,7 @@ describe('generate-and-save', () => {
     const writeSpy = jest.spyOn(fs, 'writeSync').mockImplementation();
     // forces file to exist
     const fileExistsSpy = jest.spyOn(fs, 'fileExists');
-    fileExistsSpy.mockImplementation((file) => file === filename);
+    fileExistsSpy.mockImplementation(file => file === filename);
 
     const output = await generate(
       {
@@ -106,7 +106,7 @@ describe('generate-and-save', () => {
     const writeSpy = jest.spyOn(fs, 'writeSync').mockImplementation();
     // forces file to exist
     const fileExistsSpy = jest.spyOn(fs, 'fileExists');
-    fileExistsSpy.mockImplementation((file) => file === filename);
+    fileExistsSpy.mockImplementation(file => file === filename);
 
     const output = await generate(
       {
@@ -135,10 +135,10 @@ describe('generate-and-save', () => {
     const filename = 'overwrite.ts';
     const writeSpy = jest.spyOn(fs, 'writeSync').mockImplementation();
     const readSpy = jest.spyOn(fs, 'readSync').mockImplementation();
-    readSpy.mockImplementation((f) => '');
+    readSpy.mockImplementation(f => '');
     // forces file to exist
     const fileExistsSpy = jest.spyOn(fs, 'fileExists');
-    fileExistsSpy.mockImplementation((file) => file === filename);
+    fileExistsSpy.mockImplementation(file => file === filename);
 
     const output = await generate(
       {

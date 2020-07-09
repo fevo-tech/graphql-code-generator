@@ -1,6 +1,6 @@
-import '@graphql-codegen/testing';
+import '@fevo-tech/graphql-codegen-testing';
 
-import { codegen } from '@graphql-codegen/core';
+import { codegen } from '@fevo-tech/graphql-codegen-core';
 import { buildASTSchema, parse } from 'graphql';
 import gql from 'graphql-tag';
 

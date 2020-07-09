@@ -15,7 +15,7 @@ export function generateDocs(schema: TJS.Definition, types: PluginConfig[]): Rec
 
     content += `## Installation\n\n:::shell Using \`yarn\`
 
-    $ yarn add -D @graphql-codegen/${p.pluginName}
+    $ yarn add -D @fevo-tech/graphql-codegen-${p.pluginName}
 
 :::\n\n`;
     content += `## API Reference\n\n${apiDocs}`;

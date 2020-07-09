@@ -15,8 +15,8 @@ import {
   BaseResolversVisitor,
   DeclarationBlock,
   DeclarationKind,
-} from '@graphql-codegen/visitor-plugin-common';
-import { FlowOperationVariablesToObject } from '@graphql-codegen/flow';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
+import { FlowOperationVariablesToObject } from '@fevo-tech/graphql-codegen-flow';
 import { FLOW_REQUIRE_FIELDS_TYPE } from './flow-util-types';
 
 export const ENUM_RESOLVERS_SIGNATURE =

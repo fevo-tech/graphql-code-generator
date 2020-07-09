@@ -4,10 +4,10 @@ import {
   LoadedFragment,
   DocumentMode,
   RawClientSideBasePluginConfig,
-} from '@graphql-codegen/visitor-plugin-common';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import autoBind from 'auto-bind';
 import { OperationDefinitionNode, GraphQLSchema } from 'graphql';
-import { Types } from '@graphql-codegen/plugin-helpers';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { pascalCase } from 'pascal-case';
 
 export interface ReactApolloPluginConfig extends ClientSideBasePluginConfig {}

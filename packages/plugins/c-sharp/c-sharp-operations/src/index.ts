@@ -1,6 +1,6 @@
-import { Types, PluginValidateFn, PluginFunction } from '@graphql-codegen/plugin-helpers';
+import { Types, PluginValidateFn, PluginFunction } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { visit, GraphQLSchema, concatAST, Kind, FragmentDefinitionNode } from 'graphql';
-import { LoadedFragment } from '@graphql-codegen/visitor-plugin-common';
+import { LoadedFragment } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { CSharpOperationsVisitor } from './visitor';
 import { extname } from 'path';
 import gql from 'graphql-tag';

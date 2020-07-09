@@ -1,5 +1,5 @@
 import { basename, relative } from 'path';
-import { Types, PluginFunction, PluginValidateFn } from '@graphql-codegen/plugin-helpers';
+import { Types, PluginFunction, PluginValidateFn } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { GraphQLSchema, OperationDefinitionNode } from 'graphql';
 
 /**

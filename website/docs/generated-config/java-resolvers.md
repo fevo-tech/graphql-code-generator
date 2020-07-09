@@ -2,7 +2,7 @@
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/java-resolvers
+    $ yarn add -D @fevo-tech/graphql-codegen-java-resolvers
 
 :::
 

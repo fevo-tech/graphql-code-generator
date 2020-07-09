@@ -1,5 +1,5 @@
 import { Kind, TypeNode, StringValueNode } from 'graphql';
-import { indent } from '@graphql-codegen/visitor-plugin-common';
+import { indent } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { csharpNativeValueTypes } from './common';
 
 export function buildPackageNameFromPath(path: string): string {

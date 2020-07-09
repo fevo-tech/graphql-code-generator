@@ -1,5 +1,5 @@
 {
-  "name": "@graphql-codegen/plugin-helpers",
+  "name": "@fevo-tech/graphql-codegen-plugin-helpers",
   "version": "1.15.4",
   "description": "GraphQL Code Generator common utils and types",
   "repository": {

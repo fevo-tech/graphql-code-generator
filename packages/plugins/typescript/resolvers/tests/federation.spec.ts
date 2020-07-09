@@ -1,6 +1,6 @@
-import '@graphql-codegen/testing';
+import '@fevo-tech/graphql-codegen-testing';
 import { parse } from 'graphql';
-import { codegen } from '@graphql-codegen/core';
+import { codegen } from '@fevo-tech/graphql-codegen-core';
 import { plugin } from '../src';
 import { TypeScriptResolversPluginConfig } from '../src/config';
 

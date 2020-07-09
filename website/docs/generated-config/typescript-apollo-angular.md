@@ -2,7 +2,7 @@ This plugin generates Apollo services (`Query`, `Mutation` and `Subscription`) w
 
 It will generate a strongly typed Angular service for every defined query, mutation or subscription. The generated Angular services are ready to inject and use within your Angular component.
 
-It extends the basic TypeScript plugins: `@graphql-codegen/typescript`, `@graphql-codegen/typescript-operations` - and thus shares a similar configuration.
+It extends the basic TypeScript plugins: `@fevo-tech/graphql-codegen-typescript`, `@fevo-tech/graphql-codegen-typescript-operations` - and thus shares a similar configuration.
 
 To shed some more light regards this template, it's recommended to go through the this article: http://apollographql.com/docs/angular/basics/services.html , and to read the Code Generation with Apollo Angular: https://the-guild.dev/blog/apollo-angular-12
 
@@ -10,7 +10,7 @@ To shed some more light regards this template, it's recommended to go through th
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/typescript-apollo-angular
+    $ yarn add -D @fevo-tech/graphql-codegen-typescript-apollo-angular
 
 :::
 

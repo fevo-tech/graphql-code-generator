@@ -1,5 +1,5 @@
-import { Types } from '@graphql-codegen/plugin-helpers';
-import { generateFragmentImportStatement } from '@graphql-codegen/visitor-plugin-common';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
+import { generateFragmentImportStatement } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { buildASTSchema, buildSchema, parse, printSchema } from 'graphql';
 import { preset } from '../src/index';
 

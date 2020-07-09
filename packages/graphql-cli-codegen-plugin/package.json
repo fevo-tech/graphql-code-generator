@@ -26,7 +26,7 @@
     "graphql": "^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0"
   },
   "dependencies": {
-    "@graphql-codegen/cli": "1.15.4",
+    "@fevo-tech/graphql-codegen-cli": "1.15.4",
     "@graphql-cli/common": "4.0.0"
   },
   "main": "dist/index.cjs.js",

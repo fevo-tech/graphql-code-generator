@@ -3,7 +3,7 @@ import {
   ClientSideBasePluginConfig,
   getConfigValue,
   LoadedFragment,
-} from '@graphql-codegen/visitor-plugin-common';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { StencilComponentType, StencilApolloRawPluginConfig } from './config';
 import autoBind from 'auto-bind';
 import { OperationDefinitionNode, GraphQLSchema } from 'graphql';

@@ -1,4 +1,4 @@
-import { RawConfig } from '@graphql-codegen/visitor-plugin-common';
+import { RawConfig } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 
 export interface TypeScriptMongoPluginConfig extends RawConfig {
   /**

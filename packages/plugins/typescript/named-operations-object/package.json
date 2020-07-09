@@ -1,5 +1,5 @@
 {
-  "name": "@graphql-codegen/named-operations-object",
+  "name": "@fevo-tech/graphql-codegen-named-operations-object",
   "version": "1.15.4",
   "description": "GraphQL Code Generator plugin for generating an enum with all loaded operations, for simpler and type-safe access",
   "repository": {
@@ -18,7 +18,7 @@
     "graphql-tag": "^2.0.0"
   },
   "dependencies": {
-    "@graphql-codegen/plugin-helpers": "1.15.4",
+    "@fevo-tech/graphql-codegen-plugin-helpers": "1.15.4",
     "change-case": "4.1.1",
     "tslib": "~2.0.0"
   },

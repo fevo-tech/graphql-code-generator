@@ -1,8 +1,8 @@
-import { validateTs } from '@graphql-codegen/testing';
+import { validateTs } from '@fevo-tech/graphql-codegen-testing';
 import { parse, buildClientSchema, buildSchema } from 'graphql';
 import { plugin } from '../src/index';
 import { plugin as tsPlugin } from '../../typescript/src';
-import { mergeOutputs, Types } from '@graphql-codegen/plugin-helpers';
+import { mergeOutputs, Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 
 describe('TypeScript Operations Plugin', () => {
   const gitHuntSchema = buildClientSchema(require('../../../../../dev-test/githunt/schema.json'));

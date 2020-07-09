@@ -1,5 +1,5 @@
-import { Types } from '@graphql-codegen/plugin-helpers';
-import '@graphql-codegen/testing';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
+import '@fevo-tech/graphql-codegen-testing';
 import { parse, buildClientSchema, buildSchema } from 'graphql';
 import { plugin } from '../src/index';
 import { validateFlow } from '../../flow/tests/validate-flow';

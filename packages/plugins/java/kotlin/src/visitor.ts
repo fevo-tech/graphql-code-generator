@@ -7,7 +7,7 @@ import {
   ParsedConfig,
   transformComment,
   getBaseTypeNode,
-} from '@graphql-codegen/visitor-plugin-common';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { KotlinResolversPluginRawConfig } from './config';
 import {
   EnumTypeDefinitionNode,
@@ -25,7 +25,7 @@ import {
   TypeNode,
   ValueNode,
 } from 'graphql';
-import { wrapTypeWithModifiers } from '@graphql-codegen/java-common';
+import { wrapTypeWithModifiers } from '@fevo-tech/graphql-codegen-java-common';
 
 export const KOTLIN_SCALARS = {
   ID: 'Any',

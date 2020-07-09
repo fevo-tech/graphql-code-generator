@@ -1,6 +1,6 @@
-import '@graphql-codegen/testing';
+import '@fevo-tech/graphql-codegen-testing';
 import { buildSchema, Kind } from 'graphql';
-import { Types, mergeOutputs } from '@graphql-codegen/plugin-helpers';
+import { Types, mergeOutputs } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { plugin } from '../src/plugin';
 import { validateJava } from '../../common/tests/validate-java';
 import { FileType } from '../src/file-type';

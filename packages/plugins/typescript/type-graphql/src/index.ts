@@ -1,7 +1,7 @@
-import { Types, PluginFunction } from '@graphql-codegen/plugin-helpers';
+import { Types, PluginFunction } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { parse, printSchema, visit, GraphQLSchema } from 'graphql';
 import { TypeGraphQLVisitor } from './visitor';
-import { TsIntrospectionVisitor, includeIntrospectionDefinitions } from '@graphql-codegen/typescript';
+import { TsIntrospectionVisitor, includeIntrospectionDefinitions } from '@fevo-tech/graphql-codegen-typescript';
 import { TypeGraphQLPluginConfig } from './config';
 
 export * from './visitor';

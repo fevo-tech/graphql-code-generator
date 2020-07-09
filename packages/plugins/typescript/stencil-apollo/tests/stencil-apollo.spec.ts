@@ -1,9 +1,9 @@
-import '@graphql-codegen/testing';
+import '@fevo-tech/graphql-codegen-testing';
 import { StencilComponentType } from '../src/config';
 import { plugin } from '../src';
 import { buildClientSchema } from 'graphql';
 import gql from 'graphql-tag';
-import { Types } from '@graphql-codegen/plugin-helpers';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 
 describe('Components', () => {
   const schema = buildClientSchema(require('../../../../../dev-test/githunt/schema.json'));

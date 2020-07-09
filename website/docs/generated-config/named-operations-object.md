@@ -2,7 +2,7 @@
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/named-operations-object
+    $ yarn add -D @fevo-tech/graphql-codegen-named-operations-object
 
 :::
 

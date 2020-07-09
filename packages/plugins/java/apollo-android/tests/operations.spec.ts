@@ -1,7 +1,7 @@
-import '@graphql-codegen/testing';
+import '@fevo-tech/graphql-codegen-testing';
 import { parse, buildSchema } from 'graphql';
 import { plugin } from '../src/plugin';
-import { mergeOutputs } from '@graphql-codegen/plugin-helpers';
+import { mergeOutputs } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { FileType } from '../src/file-type';
 
 describe('Operations Visitor', () => {

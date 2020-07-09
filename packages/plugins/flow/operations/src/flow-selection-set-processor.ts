@@ -6,7 +6,7 @@ import {
   ProcessResult,
   BaseSelectionSetProcessor,
   indent,
-} from '@graphql-codegen/visitor-plugin-common';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { GraphQLObjectType, GraphQLInterfaceType } from 'graphql';
 
 export interface FlowSelectionSetProcessorConfig extends SelectionSetProcessorConfig {
@@ -91,7 +91,9 @@ export class FlowWithPickSelectionSetProcessor extends BaseSelectionSetProcessor
     const fieldObj = schemaType.getFields();
     return [
       `$Pick<${parentName}, {${useFlowExactObject ? '|' : ''} ${fields
-        .map(fieldName => `${useFlowReadOnlyTypes ? '+' : ''}${formatNamedField(fieldName, fieldObj[fieldName].type)}: *`)
+        .map(
+          fieldName => `${useFlowReadOnlyTypes ? '+' : ''}${formatNamedField(fieldName, fieldObj[fieldName].type)}: *`
+        )
         .join(', ')} ${useFlowExactObject ? '|' : ''}}>`,
     ];
   }

@@ -1,5 +1,5 @@
-import { validateTs } from '@graphql-codegen/testing';
-import { Types, mergeOutputs } from '@graphql-codegen/plugin-helpers';
+import { validateTs } from '@fevo-tech/graphql-codegen-testing';
+import { Types, mergeOutputs } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { buildSchema, parse, GraphQLSchema, GraphQLObjectType, GraphQLEnumType } from 'graphql';
 import { plugin } from '../src/index';
 

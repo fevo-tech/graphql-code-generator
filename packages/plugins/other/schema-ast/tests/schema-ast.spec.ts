@@ -1,9 +1,9 @@
 import { validate, plugin } from '../src/index';
 import { buildSchema, parse } from 'graphql';
-import '@graphql-codegen/testing';
-import { Types } from '@graphql-codegen/plugin-helpers';
+import '@fevo-tech/graphql-codegen-testing';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 
-import { codegen } from '@graphql-codegen/core';
+import { codegen } from '@fevo-tech/graphql-codegen-core';
 
 const SHOULD_THROW_ERROR = 'SHOULD_THROW_ERROR';
 

@@ -18,15 +18,15 @@ First we gotta make sure that the basic GraphQL package is within our dependenci
 The we can install GraphQL Code Generator using `yarn` (or `npm`):
 
 :::shell With `yarn`
-    yarn add -D @graphql-codegen/cli
+    yarn add -D @fevo-tech/graphql-codegen-cli
 :::
 
 :::shell With `npm`
-    npm install --save-dev @graphql-codegen/cli
+    npm install --save-dev @fevo-tech/graphql-codegen-cli
 :::
 
 :::caution Global Installation
-Please avoid installing `graphql`, `@graphql-codegen/cli` and it's plugins as global dependencies. This will cause issues because of duplications of `graphql` package. Install it only locally in your project.
+Please avoid installing `graphql`, `@fevo-tech/graphql-codegen-cli` and it's plugins as global dependencies. This will cause issues because of duplications of `graphql` package. Install it only locally in your project.
 :::
 
 ## Initialization Wizard
@@ -50,11 +50,11 @@ If you don't want to use the wizard, we've got you covered, just continue readin
 GraphQL Code Generator's behavior is bound into plugins, thus we will need to install one of them, for example:
 
 :::shell With `yarn`
-    yarn add -D @graphql-codegen/typescript
+    yarn add -D @fevo-tech/graphql-codegen-typescript
 :::
 
 :::shell With `npm`
-    npm install --save-dev @graphql-codegen/typescript
+    npm install --save-dev @fevo-tech/graphql-codegen-typescript
 :::
 
 Although can be used directly, it's recommended to add the code generation script in your `package.json`:

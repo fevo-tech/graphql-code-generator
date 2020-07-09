@@ -1,4 +1,4 @@
-import { RawDocumentsConfig, AvoidOptionalsConfig } from '@graphql-codegen/visitor-plugin-common';
+import { RawDocumentsConfig, AvoidOptionalsConfig } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 
 /**
  * @description This plugin generates TypeScript types based on your GraphQLSchema *and* your GraphQL operations and fragments.

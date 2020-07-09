@@ -6,7 +6,7 @@ It generates types that are pointing to the new form of types. It supports _most
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/typescript-compatibility
+    $ yarn add -D @fevo-tech/graphql-codegen-typescript-compatibility
 
 :::
 

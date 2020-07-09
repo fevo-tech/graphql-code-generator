@@ -1,8 +1,8 @@
-import { validateTs } from '@graphql-codegen/testing';
+import { validateTs } from '@fevo-tech/graphql-codegen-testing';
 import { parse } from 'graphql';
 
 import { plugin } from '../src/index';
-import { Types } from '@graphql-codegen/plugin-helpers';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 
 describe('graphql-codegen typescript-graphql-document-nodes', () => {
   it('Should generate simple module with one file', async () => {

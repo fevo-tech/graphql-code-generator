@@ -1,4 +1,4 @@
-import { Types } from '@graphql-codegen/plugin-helpers';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { debugLog } from './utils/debugging';
 import { exec } from 'child_process';
 import { delimiter, sep } from 'path';

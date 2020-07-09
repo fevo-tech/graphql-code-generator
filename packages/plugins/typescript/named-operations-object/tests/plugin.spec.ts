@@ -1,4 +1,4 @@
-import '@graphql-codegen/testing';
+import '@fevo-tech/graphql-codegen-testing';
 import { plugin } from '../src';
 import { parse } from 'graphql';
 

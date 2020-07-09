@@ -1,9 +1,9 @@
-import { RawClientSideBasePluginConfig } from '@graphql-codegen/visitor-plugin-common';
+import { RawClientSideBasePluginConfig } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 
 /**
  * @description This plugin generates Stencil Apollo functional components typings
  *
- * It extends the basic TypeScript plugins: `@graphql-codegen/typescript`, `@graphql-codegen/typescript-operations` - and thus shares a similar configuration.
+ * It extends the basic TypeScript plugins: `@fevo-tech/graphql-codegen-typescript`, `@fevo-tech/graphql-codegen-typescript-operations` - and thus shares a similar configuration.
  */
 export interface StencilApolloRawPluginConfig extends RawClientSideBasePluginConfig {
   /**

@@ -3,7 +3,7 @@ import {
   ClientSideBasePluginConfig,
   LoadedFragment,
   indentMultiline,
-} from '@graphql-codegen/visitor-plugin-common';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import autoBind from 'auto-bind';
 import { GraphQLSchema, OperationDefinitionNode, print } from 'graphql';
 

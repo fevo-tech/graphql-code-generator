@@ -2,7 +2,7 @@ import { generate } from './generate-and-save';
 import { init } from './init';
 import { createContext } from './config';
 import { lifecycleHooks } from './hooks';
-import { DetailedError } from '@graphql-codegen/plugin-helpers';
+import { DetailedError } from '@fevo-tech/graphql-codegen-plugin-helpers';
 
 export function runCli(cmd: string): Promise<any> {
   ensureGraphQlPackage();

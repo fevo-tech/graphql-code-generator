@@ -1,5 +1,5 @@
 import { GraphQLSchema } from 'graphql';
-import { PluginFunction, Types } from '@graphql-codegen/plugin-helpers';
+import { PluginFunction, Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import moment from 'moment';
 
 export type TimePluginConfig =

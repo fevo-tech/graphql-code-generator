@@ -4,7 +4,7 @@ This plugin generates [`graphql-request`](https://www.npmjs.com/package/graphql-
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/typescript-graphql-request
+    $ yarn add -D @fevo-tech/graphql-codegen-typescript-graphql-request
 
 :::
 

@@ -4,12 +4,12 @@ import {
   DocumentMode,
   LoadedFragment,
   indentMultiline,
-} from '@graphql-codegen/visitor-plugin-common';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import autoBind from 'auto-bind';
 import { OperationDefinitionNode, print, visit, GraphQLSchema, Kind } from 'graphql';
 import { ApolloAngularRawPluginConfig } from './config';
 import { camelCase } from 'camel-case';
-import { Types } from '@graphql-codegen/plugin-helpers';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 
 const R_MOD = /module:\s*"([^"]+)"/; // matches: module: "..."
 const R_NAME = /name:\s*"([^"]+)"/; // matches: name: "..."

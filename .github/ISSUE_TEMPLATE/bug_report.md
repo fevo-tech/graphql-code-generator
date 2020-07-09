@@ -50,7 +50,7 @@ Please make sure the Codegen and plugins version under `package.json` matches yo
 **Environment:**
 
 - OS: 
-- `@graphql-codegen/...`: 
+- `@fevo-tech/graphql-codegen-...`: 
 - NodeJS: 
 
 **Additional context**

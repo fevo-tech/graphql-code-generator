@@ -1,4 +1,4 @@
-import { indentMultiline } from '@graphql-codegen/visitor-plugin-common';
+import { indentMultiline } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { StringValueNode, NameNode } from 'graphql';
 import { transformComment } from './common';
 const stripIndent = require('strip-indent');

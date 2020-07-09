@@ -16,7 +16,7 @@ Run the following in your Android project:
 
 ```
   $ yarn init --yes
-  $ yarn add @graphql-codegen/cli graphql @graphql-codegen/java-apollo-android
+  $ yarn add @fevo-tech/graphql-codegen-cli graphql @fevo-tech/graphql-codegen-java-apollo-android
 ```
 
 Then, create `codegen.yml` with the following configuration:

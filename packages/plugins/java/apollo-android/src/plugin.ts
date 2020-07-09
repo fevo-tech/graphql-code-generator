@@ -1,6 +1,6 @@
-import { PluginFunction, Types } from '@graphql-codegen/plugin-helpers';
+import { PluginFunction, Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { GraphQLSchema, concatAST, visit, Kind, FragmentDefinitionNode } from 'graphql';
-import { RawConfig, LoadedFragment } from '@graphql-codegen/visitor-plugin-common';
+import { RawConfig, LoadedFragment } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { InputTypeVisitor } from './input-type-visitor';
 import { BaseJavaVisitor } from './base-java-visitor';
 import { OperationVisitor } from './operation-visitor';

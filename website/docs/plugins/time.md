@@ -5,7 +5,7 @@ title: Time
 
 ## Installation
 
-    $ yarn add -D @graphql-codegen/time
+    $ yarn add -D @fevo-tech/graphql-codegen-time
 
 ## Configuration
 

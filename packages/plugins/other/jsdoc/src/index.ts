@@ -1,4 +1,4 @@
-import { PluginFunction } from '@graphql-codegen/plugin-helpers';
+import { PluginFunction } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import {
   printSchema,
   parse,
@@ -10,7 +10,7 @@ import {
   InputValueDefinitionNode,
   StringValueNode,
 } from 'graphql';
-import { DEFAULT_SCALARS, RawDocumentsConfig } from '@graphql-codegen/visitor-plugin-common';
+import { DEFAULT_SCALARS, RawDocumentsConfig } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 
 const transformScalar = (scalar: string) => {
   if (DEFAULT_SCALARS[scalar] === undefined) {

@@ -1,4 +1,4 @@
-import '@graphql-codegen/testing';
+import '@fevo-tech/graphql-codegen-testing';
 import { buildSchema } from 'graphql';
 import { plugin } from '../src/index';
 import { validateJava } from '../../common/tests/validate-java';

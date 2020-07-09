@@ -11,7 +11,7 @@ import {
 } from 'graphql';
 import { DepGraph } from 'dependency-graph';
 import gqlTag from 'graphql-tag';
-import { Types } from '@graphql-codegen/plugin-helpers';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { getConfigValue, buildScalars } from './utils';
 import { LoadedFragment } from './types';
 import { basename, extname } from 'path';

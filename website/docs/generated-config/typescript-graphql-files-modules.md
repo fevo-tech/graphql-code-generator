@@ -8,7 +8,7 @@ This plugin also handles `.graphql` files containing multiple GraphQL documents,
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/typescript-graphql-files-modules
+    $ yarn add -D @fevo-tech/graphql-codegen-typescript-graphql-files-modules
 
 :::
 

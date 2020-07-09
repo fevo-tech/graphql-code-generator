@@ -42,7 +42,7 @@ Once installed, add the directives declaration to your GraphQL Schema definition
 
 ```typescript
 import { makeExecutableSchema } from '@graphql-tools/schema';
-import { DIRECTIVES } from '@graphql-codegen/typescript-mongodb';
+import { DIRECTIVES } from '@fevo-tech/graphql-codegen-typescript-mongodb';
 
 const schema = makeExecutableSchema({
   typeDefs: [

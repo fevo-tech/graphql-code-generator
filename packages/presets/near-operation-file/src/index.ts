@@ -1,5 +1,5 @@
-import { Types, CodegenPlugin } from '@graphql-codegen/plugin-helpers';
-import addPlugin from '@graphql-codegen/add';
+import { Types, CodegenPlugin } from '@fevo-tech/graphql-codegen-plugin-helpers';
+import addPlugin from '@fevo-tech/graphql-codegen-add';
 import { join } from 'path';
 import { FragmentDefinitionNode, buildASTSchema, GraphQLSchema } from 'graphql';
 import { appendExtensionToFilePath, defineFilepathSubfolder } from './utils';

@@ -3,7 +3,7 @@ import {
   indent,
   DeclarationBlock,
   AvoidOptionalsConfig,
-} from '@graphql-codegen/visitor-plugin-common';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { TypeGraphQLPluginConfig } from './config';
 import autoBind from 'auto-bind';
 import {
@@ -21,7 +21,7 @@ import {
   TypeScriptOperationVariablesToObject,
   TypeScriptPluginParsedConfig,
   TsVisitor,
-} from '@graphql-codegen/typescript';
+} from '@fevo-tech/graphql-codegen-typescript';
 
 export type DecoratorConfig = {
   type: string;

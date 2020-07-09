@@ -5,8 +5,8 @@ import {
   normalizeOutputParam,
   normalizeInstanceOrArray,
   normalizeConfig,
-} from '@graphql-codegen/plugin-helpers';
-import { codegen } from '@graphql-codegen/core';
+} from '@fevo-tech/graphql-codegen-plugin-helpers';
+import { codegen } from '@fevo-tech/graphql-codegen-core';
 
 import { Renderer } from './utils/listr-renderer';
 import { GraphQLError, GraphQLSchema, DocumentNode, parse } from 'graphql';

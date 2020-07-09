@@ -1,5 +1,5 @@
 import { buildSchema, introspectionFromSchema, parse, IntrospectionQuery, IntrospectionObjectType } from 'graphql';
-import { codegen } from '@graphql-codegen/core';
+import { codegen } from '@fevo-tech/graphql-codegen-core';
 import { plugin } from '../src';
 
 describe('Introspection template', () => {

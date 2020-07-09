@@ -1,7 +1,7 @@
 import { FlowWithPickSelectionSetProcessor } from './flow-selection-set-processor';
 import { GraphQLSchema, isEnumType, isNonNullType, GraphQLOutputType } from 'graphql';
 import { FlowDocumentsPluginConfig } from './config';
-import { FlowOperationVariablesToObject } from '@graphql-codegen/flow';
+import { FlowOperationVariablesToObject } from '@fevo-tech/graphql-codegen-flow';
 import {
   wrapTypeWithModifiers,
   PreResolveTypesProcessor,
@@ -12,7 +12,7 @@ import {
   SelectionSetToObject,
   getConfigValue,
   DeclarationKind,
-} from '@graphql-codegen/visitor-plugin-common';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 
 import autoBind from 'auto-bind';
 

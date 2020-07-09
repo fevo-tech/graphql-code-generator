@@ -1,7 +1,7 @@
-import { PluginFunction, Types } from '@graphql-codegen/plugin-helpers';
+import { PluginFunction, Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { visit, concatAST, GraphQLSchema, Kind, FragmentDefinitionNode } from 'graphql';
 import { FlowDocumentsVisitor } from './visitor';
-import { LoadedFragment, optimizeOperations } from '@graphql-codegen/visitor-plugin-common';
+import { LoadedFragment, optimizeOperations } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { FlowDocumentsPluginConfig } from './config';
 
 export const plugin: PluginFunction<FlowDocumentsPluginConfig> = (

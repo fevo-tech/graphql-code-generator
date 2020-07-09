@@ -1,4 +1,4 @@
-import { indent } from '@graphql-codegen/visitor-plugin-common';
+import { indent } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { set } from 'lodash';
 
 type FieldsResult = { [name: string]: string | FieldsResult };

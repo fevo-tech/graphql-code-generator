@@ -1,3 +1,3 @@
 module.exports = {
-  ignore: ['@graphql-codegen/website', '@graphql-codegen/live-demo', '@graphql-codegen/config-schema'],
+  ignore: ['@fevo-tech/graphql-codegen-website', '@fevo-tech/graphql-codegen-live-demo', '@fevo-tech/graphql-codegen-config-schema'],
 };

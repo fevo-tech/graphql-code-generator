@@ -1,11 +1,14 @@
-import { DocumentMode } from '@graphql-codegen/visitor-plugin-common';
-import { validateTs } from '@graphql-codegen/testing';
+import { DocumentMode } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
+import { validateTs } from '@fevo-tech/graphql-codegen-testing';
 import { RawGenericSdkPluginConfig } from '../src/config';
 import { plugin } from '../src/index';
 import { parse, buildClientSchema, GraphQLSchema } from 'graphql';
-import { Types, mergeOutputs } from '@graphql-codegen/plugin-helpers';
-import { plugin as tsPlugin, TypeScriptPluginConfig } from '@graphql-codegen/typescript';
-import { plugin as tsDocumentsPlugin, TypeScriptDocumentsPluginConfig } from '@graphql-codegen/typescript-operations';
+import { Types, mergeOutputs } from '@fevo-tech/graphql-codegen-plugin-helpers';
+import { plugin as tsPlugin, TypeScriptPluginConfig } from '@fevo-tech/graphql-codegen-typescript';
+import {
+  plugin as tsDocumentsPlugin,
+  TypeScriptDocumentsPluginConfig,
+} from '@fevo-tech/graphql-codegen-typescript-operations';
 
 const schema = buildClientSchema(require('../../../../../dev-test/githunt/schema.json'));
 const basicDoc = parse(/* GraphQL */ `

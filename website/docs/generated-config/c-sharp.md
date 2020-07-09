@@ -4,7 +4,7 @@ This plugin generates C# `class` identifier for your schema types.
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/c-sharp
+    $ yarn add -D @fevo-tech/graphql-codegen-c-sharp
 
 :::
 

@@ -6,7 +6,7 @@ import {
   indent,
   buildScalars,
   getBaseTypeNode,
-} from '@graphql-codegen/visitor-plugin-common';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { CSharpResolversPluginRawConfig } from './config';
 import {
   GraphQLSchema,

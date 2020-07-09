@@ -1,5 +1,5 @@
-import { BaseVisitor } from '@graphql-codegen/visitor-plugin-common';
-import { getBaseType } from '@graphql-codegen/plugin-helpers';
+import { BaseVisitor } from '@fevo-tech/graphql-codegen-visitor-plugin-common';
+import { getBaseType } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import {
   SelectionSetNode,
   isObjectType,

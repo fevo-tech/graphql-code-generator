@@ -6,7 +6,7 @@ It generates types for your entire schema: types, input types, enum, interface, 
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/flow
+    $ yarn add -D @fevo-tech/graphql-codegen-flow
 
 :::
 

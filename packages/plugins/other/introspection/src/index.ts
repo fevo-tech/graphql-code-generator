@@ -1,5 +1,5 @@
 import { GraphQLSchema, introspectionFromSchema } from 'graphql';
-import { PluginFunction, PluginValidateFn, Types, removeFederation } from '@graphql-codegen/plugin-helpers';
+import { PluginFunction, PluginValidateFn, Types, removeFederation } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { extname } from 'path';
 
 /**

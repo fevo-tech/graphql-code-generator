@@ -2,7 +2,7 @@
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/typescript-type-graphql
+    $ yarn add -D @fevo-tech/graphql-codegen-typescript-type-graphql
 
 :::
 

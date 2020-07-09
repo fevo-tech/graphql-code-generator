@@ -2,13 +2,13 @@ This plugin generates resolvers signature based on your `GraphQLSchema`.
 
 It generates types for your entire schema: types, input types, enum, interface, scalar and union.
 
-This plugin requires you to use `@graphql-codegen/flow` as well, because it depends on it's types.
+This plugin requires you to use `@fevo-tech/graphql-codegen-flow` as well, because it depends on it's types.
 
 ## Installation
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/flow-resolvers
+    $ yarn add -D @fevo-tech/graphql-codegen-flow-resolvers
 
 :::
 

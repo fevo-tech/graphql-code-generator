@@ -1,7 +1,7 @@
 import chalk from 'chalk';
 import { resolve, relative } from 'path';
 import { writeFileSync, readFileSync } from 'fs';
-import { Types } from '@graphql-codegen/plugin-helpers';
+import { Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import detectIndent from 'detect-indent';
 import { Answers } from './types';
 
@@ -63,11 +63,11 @@ export async function writePackage(answers: Answers, configLocation: string) {
   });
 
   if (answers.introspection) {
-    pkg.devDependencies['@graphql-codegen/introspection'] = version;
+    pkg.devDependencies['@fevo-tech/graphql-codegen-introspection'] = version;
   }
 
   // If cli haven't installed yet
-  pkg.devDependencies['@graphql-codegen/cli'] = version;
+  pkg.devDependencies['@fevo-tech/graphql-codegen-cli'] = version;
 
   writeFileSync(pkgPath, JSON.stringify(pkg, null, indent));
 }

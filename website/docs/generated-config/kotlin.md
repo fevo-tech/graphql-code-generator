@@ -2,7 +2,7 @@
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/kotlin
+    $ yarn add -D @fevo-tech/graphql-codegen-kotlin
 
 :::
 

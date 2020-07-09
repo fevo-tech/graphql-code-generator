@@ -1,5 +1,5 @@
 {
-  "name": "@graphql-codegen/cli",
+  "name": "@fevo-tech/graphql-codegen-cli",
   "version": "1.15.4",
   "license": "MIT",
   "bin": {
@@ -40,8 +40,8 @@
   },
   "homepage": "https://github.com/dotansimha/graphql-code-generator#readme",
   "dependencies": {
-    "@graphql-codegen/core": "1.15.4",
-    "@graphql-codegen/plugin-helpers": "1.15.4",
+    "@fevo-tech/graphql-codegen-core": "1.15.4",
+    "@fevo-tech/graphql-codegen-plugin-helpers": "1.15.4",
     "@graphql-tools/apollo-engine-loader": "^6.0.0",
     "@graphql-tools/code-file-loader": "^6.0.0",
     "@graphql-tools/git-loader": "^6.0.0",

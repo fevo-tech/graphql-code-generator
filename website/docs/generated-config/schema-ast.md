@@ -4,7 +4,7 @@ This plugin prints the merged schema as string. If multiple schemas are provided
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/schema-ast
+    $ yarn add -D @fevo-tech/graphql-codegen-schema-ast
 
 :::
 

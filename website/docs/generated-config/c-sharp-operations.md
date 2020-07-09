@@ -4,7 +4,7 @@ This plugin generates C# `class` based on your GraphQL operations.
 
 :::shell Using `yarn`
 
-    $ yarn add -D @graphql-codegen/c-sharp-operations
+    $ yarn add -D @fevo-tech/graphql-codegen-c-sharp-operations
 
 :::
 

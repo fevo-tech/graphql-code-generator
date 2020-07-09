@@ -1,11 +1,11 @@
-import { DetailedError, Types } from '@graphql-codegen/plugin-helpers';
+import { DetailedError, Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { resolve } from 'path';
 
 export async function getPresetByName(
   name: string,
   loader: Types.PackageLoaderFn<{ preset?: Types.OutputPreset; default?: Types.OutputPreset }>
 ): Promise<Types.OutputPreset> {
-  const possibleNames = [`@graphql-codegen/${name}`, `@graphql-codegen/${name}-preset`, name];
+  const possibleNames = [`@fevo-tech/graphql-codegen-${name}`, `@fevo-tech/graphql-codegen-${name}-preset`, name];
   const possibleModules = possibleNames.concat(resolve(process.cwd(), name));
 
   for (const moduleName of possibleModules) {

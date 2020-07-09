@@ -1,4 +1,4 @@
-import { DetailedError, Types, CodegenPlugin } from '@graphql-codegen/plugin-helpers';
+import { DetailedError, Types, CodegenPlugin } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import { DocumentNode, GraphQLSchema, buildASTSchema } from 'graphql';
 
 export interface ExecutePluginOptions {

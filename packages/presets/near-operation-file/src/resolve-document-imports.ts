@@ -1,4 +1,4 @@
-import { isUsingTypes, Types } from '@graphql-codegen/plugin-helpers';
+import { isUsingTypes, Types } from '@fevo-tech/graphql-codegen-plugin-helpers';
 import {
   generateImportStatement,
   ImportSource,
@@ -6,7 +6,7 @@ import {
   FragmentImport,
   ImportDeclaration,
   LoadedFragment,
-} from '@graphql-codegen/visitor-plugin-common';
+} from '@fevo-tech/graphql-codegen-visitor-plugin-common';
 import { FragmentDefinitionNode, GraphQLSchema } from 'graphql';
 import buildFragmentResolver from './fragment-resolver';
 import { Source } from '@graphql-tools/utils';
